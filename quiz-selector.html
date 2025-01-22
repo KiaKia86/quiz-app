@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Selector</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="quiz-selector">
+      <h1>Choose a Quiz</h1>
+      <button class="quiz-button" data-quiz="planes">Planes Quiz</button>
+      <button class="quiz-button" data-quiz="science">Science Quiz</button>
+      <button class="quiz-button" data-quiz="history">History Quiz</button>
+      <button class="quiz-button" data-quiz="popCulture">Pop Culture Quiz</button>
+      <button id="back-button" class="glow-button">Back</button>
+    </div>
+  </div>
+  <script>
+    // Add event listener for the Back Button
+    document.getElementById("back-button").addEventListener("click", () => {
+      window.location.href = "index.html";
+    });
+
+    // Add event listeners for quiz selection buttons
+    const quizButtons = document.querySelectorAll(".quiz-button");
+    quizButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        const quizName = button.getAttribute("data-quiz");
+        localStorage.setItem("selectedQuiz", quizName);
+        window.location.href = "quiz.html";
+      });
+    });
+  </script>
+</body>
+</html>

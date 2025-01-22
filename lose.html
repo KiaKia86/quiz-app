@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>You Lose</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="result-page">
+      <h1>You Lose</h1>
+      <p>Better luck next time!</p>
+      <button id="go-back-button" class="glow-button">Go Back</button>
+    </div>
+  </div>
+  <script>
+    // Add event listener for the Go Back Button
+    document.getElementById("go-back-button").addEventListener("click", () => {
+      window.location.href = "quiz-selector.html";
+    });
+  </script>
+</body>
+</html>

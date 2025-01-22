@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>You Win!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="result-page">
+      <h1>You Win!</h1>
+      <p>Your Score: <span id="score"></span></p>
+      <button id="go-back-button" class="glow-button">Go Back</button>
+    </div>
+  </div>
+  <script>
+    // Display the score
+    const score = localStorage.getItem("quizScore");
+    document.getElementById("score").textContent = score;
+
+    // Add event listener for the Go Back Button
+    document.getElementById("go-back-button").addEventListener("click", () => {
+      window.location.href = "quiz-selector.html";
+    });
+  </script>
+</body>
+</html>
